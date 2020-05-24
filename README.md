@@ -5,7 +5,7 @@
 # AtividadeEstruturada
 
  <div style="text-align: justify">
- 
+
  <br>
 
 # INTRODUÇÃO À PROGRAMAÇÃO - CCT0001 - ATIVIDADE ESTRUTURADA.
@@ -42,7 +42,7 @@ Uma fábrica de veículos novos necessita de um sistema para o cálculo do preç
     4.3. direção hidráulica: 2% do valor de fábrica do modelo (sem o IPI).
     
     4.4. completo (trio elétrico, ar condicionado e direção hidráulica): 
-    
+
 a soma dos acréscimos isolados. Os modelos completos estão com uma promoção adicional de 3.5% do valor total, sendo este composto pelo preço de fábrica acrescido dos opcionais e do valor do IPI.
 
 Você foi escolhido para desenvolver um programa em C++, que capture o valor de fábrica do modelo, isto é, sem o IPI e, a seguir, apresente na tela o menu de opcionais (com a opção 0 ? nenhum opcional), mostrando na tela o valor resultante da opção escolhida pelo usuário. O IPI dos automóveis é de 8% do valor de fábrica.
@@ -56,14 +56,14 @@ do-while e aestrutura do switch-case).
 # ATIVIDADES A SEREM REALIZADAS
 
 A partir da descrição dos procedimentos desenvolvidos para atender ao cálculo de um automóvel 0 km de fábrica, é apresentado a você um desafio composto pelos passos abaixo:
-- [ ] ETAPA 1:
+- [x] ETAPA 1:
 1. Leia com atenção o texto;
 2. Relacione os requisitos e os problemas apresentados. O objetivo desse passo é conhecer o funcionamento do sistema e os problemas existentes.
 3. Elaborar alternativas de solução para cada problema. As alternativas visam oferecer ao cliente uma solução ao problema apresentado.
-- [ ] ETAPA 2:
+- [x] ETAPA 2:
 
 A partir das soluções escolhidas pelo professor-cliente, apresente as variáveis de entrada, variáveis para armazenamento dos cálculos e o menu de opções.
-- [ ] ETAPA 3:
+- [x] ETAPA 3:
 
 Desenvolva os cálculos necessários para o processamento.
 - [ ] ETAPA 4:
