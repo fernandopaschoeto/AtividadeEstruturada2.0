@@ -6,7 +6,7 @@ int main ()
 
 {
     setlocale (LC_ALL, "ptb");
-    float total, fabrica, trioEletrico, dirHidraulica, arCond, ipi, completo;
+    float total, fabrica, trioEletrico, dirHidraulica, arCond, ipi, completo, desconto;
     char resposta;
     int escolha;
     total = 0;
@@ -16,9 +16,8 @@ int main ()
     cout << "Informe o valor de fábrica do veículo: ";
     cin >> fabrica;
     ipi = fabrica + ((8*fabrica)/100);
-    cout << "O valor de fábrica é: R$" << fabrica << " reais" << endl;
-    cout << "O valor do IPI é: " << ipi << endl;
-
+    cout << "Informe o valor de fábrica do veículo: R$" << fabrica << " reais" << endl;
+    //cout << "O valor com IPI é: " << ipi << endl;
     while (resposta == 's') 
     {
         cout << "Informe o adicional desejado" << endl;
@@ -32,35 +31,37 @@ int main ()
         if (escolha == 0)
         {
             total = ipi;
-            resposta = 'n';
+            break;
         }
         if (escolha == 1)
         {
-            trioEletrico = fabrica + ((2*ipi)/100);
-            total = total + fabrica;
+            trioEletrico = ((2*ipi)/100);
+            total = total + trioEletrico;
         }
         if (escolha == 2)
         {
-            arCond = fabrica + ((2*fabrica)/100);
+            arCond = ((2*fabrica)/100);
             total = total + arCond;
         }
         if (escolha == 3)
         {
-            dirHidraulica = fabrica + ((2*fabrica)/100);
+            dirHidraulica = ((2*fabrica)/100);
             total = total + dirHidraulica;
         }
         if (escolha == 4)
         {
-            completo = ipi - (fabrica + ((2*ipi)/100) + ((2*fabrica)/100) + ((2*fabrica)/100));
+            completo = ipi + ((2*ipi)/100) + ((2*fabrica)/100) + ((2*fabrica)/100);
             //total = ipi - completo;
-            resposta = 'n';
+            break;
         }
         cout << "Deseja outro adicional? (s/n)" << endl;
         cin >> resposta;
     }
-    cout << "Básico: R$" << ipi << " reais" << endl;
-    cout << "Veículo com adicionais: R$" << total << " reais" << endl;
-    cout << "Completo: R$" << completo << " reais" << endl;
+    desconto = ((3.5*completo)/100);
+    cout << "Veículo Básico: R$" << ipi << " reais" << endl;
+    cout << "Veículo com adicionais: R$" << (ipi + total) << " reais" << endl;
+    cout << "Desconto para veículo completo: R$" << desconto << endl;
+    cout << "Completo: R$" << (completo - desconto) << " reais" << endl;
 
     return 0;
 }
