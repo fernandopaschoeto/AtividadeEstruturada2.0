@@ -4,6 +4,7 @@ using namespace std;
 
 int main ()
 
+
 {
     setlocale (LC_ALL, "ptb");
     float total, fabrica, trioEletrico, dirHidraulica, arCond, ipi, completo, desconto;
@@ -15,7 +16,7 @@ int main ()
     
     cout << "Informe o valor de fábrica do veículo: ";
     cin >> fabrica;
-    ipi = fabrica + ((8*fabrica)/100);
+    ipi = ((8*fabrica)/100);
     cout << "Informe o valor de fábrica do veículo: R$" << fabrica << " reais" << endl;
     //cout << "O valor com IPI é: " << ipi << endl;
     while (resposta == 's') 
@@ -30,12 +31,12 @@ int main ()
 
         if (escolha == 0)
         {
-            total = ipi;
+            total = fabrica + ipi;
             break;
         }
         if (escolha == 1)
         {
-            trioEletrico = ((2*ipi)/100);
+            trioEletrico = ((2*(fabrica+ipi))/100);
             total = total + trioEletrico;
         }
         if (escolha == 2)
@@ -50,7 +51,7 @@ int main ()
         }
         if (escolha == 4)
         {
-            completo = ipi + ((2*ipi)/100) + ((2*fabrica)/100) + ((2*fabrica)/100);
+            completo = (fabrica+ipi) + ((2*(fabrica+ipi))/100) + ((2*fabrica)/100) + ((2*fabrica)/100);
             //total = ipi - completo;
             break;
         }
@@ -58,8 +59,10 @@ int main ()
         cin >> resposta;
     }
     desconto = ((3.5*completo)/100);
-    cout << "Veículo Básico: R$" << ipi << " reais" << endl;
-    cout << "Veículo com adicionais: R$" << (ipi + total) << " reais" << endl;
+    cout << fixed << setprecision(2);
+    cout << "Veículo Básico: R$" << fabrica+ipi << " reais" << endl;
+    cout << "Valor do IPI: R$" << ipi << " reais" <<endl;
+    cout << "Veículo com adicionais: R$" << (total+fabrica+ipi) << " reais" << endl;
     cout << "Desconto para veículo completo: R$" << desconto << endl;
     cout << "Completo: R$" << (completo - desconto) << " reais" << endl;
 
