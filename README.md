@@ -66,7 +66,7 @@ A partir das soluções escolhidas pelo professor-cliente, apresente as variáve
 - [x] ETAPA 3:
 
 Desenvolva os cálculos necessários para o processamento.
-- [ ] ETAPA 4:
+- [x] ETAPA 4:
 
 Construa o programa com todas as estruturas de entrada, processamento e saída, bem como asestruturas de repetição e estrutura de seleção.
 
