@@ -63,7 +63,7 @@ int main ()
             //total = ipi - completo;
             break;
         }
-       /* else
+        /*else
         {
             cout << "Operação Inválida!!" << endl;
         }
