@@ -5,10 +5,9 @@ using namespace std;
 
 int main ()
 
-
 {
     setlocale (LC_ALL, "ptb");
-    float total, fabrica, trioEletrico, dirHidraulica, arCond, ipi, completo, desconto;
+    float total, basico, fabrica, trioEletrico, dirHidraulica, arCond, ipi, completo, desconto;
     char resposta;
     int escolha;
     int opcao1 = 0;
@@ -22,21 +21,21 @@ int main ()
     cout << "Informe o valor de fábrica do veículo: ";
     cin >> fabrica;
     ipi = ((8*fabrica)/100);
-    cout << "Informe o valor de fábrica do veículo: R$" << fabrica << " reais" << endl;
-    //cout << "O valor com IPI é: " << ipi << endl;
+    cout << "Valor de fábrica R$" << fabrica << " reais" << endl;
+    
     while (resposta == 's') 
     {
-        cout << "Informe o adicional desejado" << endl;
+        cout << "\nInforme o adicional desejado" << endl;
         cout << "(0) Básico: " << endl;
         cout << "(1) Trio Elétrico (Trava, vidro e alarme): " << endl;
         cout << "(2) Ar condicionado: " << endl;
         cout << "(3) Direção hidráulica: " << endl;
         cout << "(4) Completo: " << endl;
         cin >> escolha; 
-
+        //Finaliza o loop caso escolha básico ou completo. 
         if (escolha == 0)
         {
-            total = fabrica + ipi;
+            basico = fabrica + ipi;
             break;
         }
         if (escolha == 1)
@@ -63,23 +62,23 @@ int main ()
             //total = ipi - completo;
             break;
         }
-        /*else
+        if (escolha > 4 || escolha < 0)
         {
-            cout << "Operação Inválida!!" << endl;
+            cout << "/nValor Inválido!!" << endl;
         }
-        */
-        cout << "Deseja outro adicional? (s/n)" << endl;
+
+        cout << "\nDeseja outro adicional? (s/n)" << endl;
         cin >> resposta;
     }
     desconto = ((3.5*completo)/100);
-    cout << "Veículo Básico: R$" << fabrica+ipi << " reais" << endl;
+    cout << "\nVeículo Básico: R$" << fabrica+ipi << " reais" << endl;
     cout << "Valor do IPI: R$" << ipi << " reais" <<endl;
     cout << "Veículo com adicionais: R$" << (total+fabrica+ipi) << " reais" << endl;
-    cout << "Você optou " << opcao1 << " vezes o Trio Elétrico." << endl;
-    cout << "Você optou " << opcao2 << " Vezes o Ar condicionado." << endl;
-    cout << "Você optou " << opcao3 << " Vezes a Direção hidraulica." << endl;
     cout << "Desconto para veículo completo: R$" << desconto << endl;
     cout << "Completo: R$" << (completo - desconto) << " reais" << endl;
-
+    cout << "\nVocê optou " << opcao1 << " vezes por Trio Elétrico." << endl;
+    cout << "Você optou " << opcao2 << " Vezes por Ar condicionado." << endl;
+    cout << "Você optou " << opcao3 << " Vezes por Direção hidraulica.\n\n" << endl;
+    
     return 0;
 }
