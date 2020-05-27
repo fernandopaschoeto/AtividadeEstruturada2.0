@@ -21,7 +21,7 @@ int main ()
     cout << "Informe o valor de fábrica do veículo: ";
     cin >> fabrica;
     ipi = ((8*fabrica)/100);
-    cout << "Informe o valor de fábrica do veículo: R$" << fabrica << " reais" << endl;
+    cout << "O valor de fábrica é: R$" << fabrica << " reais" << endl;
     
     while (resposta == 's') 
     {
