@@ -1,4 +1,5 @@
 #include <iostream>
+#include <locale>
 #include <iomanip>
 
 using namespace std;
@@ -7,7 +8,7 @@ int main ()
 
 {
     setlocale (LC_ALL, "ptb");
-    float total, basico, fabrica, trioEletrico, dirHidraulica, arCond, ipi, completo, desconto;
+    float total, fabrica, trioEletrico, dirHidraulica, arCond, ipi, completo, desconto;
     char resposta;
     int escolha;
     int opcao1 = 0;
@@ -21,8 +22,7 @@ int main ()
     cout << "Informe o valor de fábrica do veículo: ";
     cin >> fabrica;
     ipi = ((8*fabrica)/100);
-    cout << "Valor de fábrica R$" << fabrica << " reais" << endl;
-    
+        
     while (resposta == 's') 
     {
         cout << "\nInforme o adicional desejado" << endl;
@@ -35,7 +35,6 @@ int main ()
         //Finaliza o loop caso escolha básico ou completo. 
         if (escolha == 0)
         {
-            basico = fabrica + ipi;
             break;
         }
         if (escolha == 1)
@@ -59,7 +58,6 @@ int main ()
         if (escolha == 4)
         {
             completo = (fabrica+ipi) + ((2*(fabrica+ipi))/100) + ((2*fabrica)/100) + ((2*fabrica)/100);
-            //total = ipi - completo;
             break;
         }
         if (escolha > 4 || escolha < 0)
@@ -71,10 +69,11 @@ int main ()
         cin >> resposta;
     }
     desconto = ((3.5*completo)/100);
-    cout << "\nVeículo Básico: R$" << fabrica+ipi << " reais" << endl;
+    cout << "\nValor de fábrica R$" << fabrica << " reais" << endl;
+    cout << "Veículo Básico: R$" << fabrica+ipi << " reais" << endl;
     cout << "Valor do IPI: R$" << ipi << " reais" <<endl;
     cout << "Veículo com adicionais: R$" << (total+fabrica+ipi) << " reais" << endl;
-    cout << "Desconto para veículo completo: R$" << desconto << endl;
+    cout << "Desconto para veículo completo: R$" << desconto << " reais" << endl;
     cout << "Completo: R$" << (completo - desconto) << " reais" << endl;
     cout << "\nVocê optou " << opcao1 << " vezes por Trio Elétrico." << endl;
     cout << "Você optou " << opcao2 << " Vezes por Ar condicionado." << endl;
