@@ -9,8 +9,8 @@
  <br>
 
 # INTRODUÇÃO À PROGRAMAÇÃO - CCT0001 - ATIVIDADE ESTRUTURADA.
-
-
+# Título
+Apenas para os códigos CCT0239, CCT0749 & CCT0793
 # Objetivo
 Possibilitar o aluno a relacionar os conteúdos trabalhados na disciplina, vivenciando o desenvolvimento de um programa com a utilização das estruturas básicas de um algoritmo:
 * Estrutura sequencial -> indica que uma operação deve ser realizada em sequência à outra, ou seja, determina a ordem com que as operações devam ser realizadas;
@@ -66,7 +66,7 @@ A partir das soluções escolhidas pelo professor-cliente, apresente as variáve
 - [x] ETAPA 3:
 
 Desenvolva os cálculos necessários para o processamento.
-- [x] ETAPA 4:
+- [ ] ETAPA 4:
 
 Construa o programa com todas as estruturas de entrada, processamento e saída, bem como asestruturas de repetição e estrutura de seleção.
 
