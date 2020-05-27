@@ -64,7 +64,7 @@ int main ()
         {
             cout << "/nValor Inválido!!" << endl;
         }
-
+        system ("clear");
         cout << "\nDeseja outro adicional? (s/n)" << endl;
         cin >> resposta;
     }
