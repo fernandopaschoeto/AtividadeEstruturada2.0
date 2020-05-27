@@ -64,7 +64,12 @@ int main ()
         {
             cout << "/nValor Inválido!!" << endl;
         }
+        /*
+        Limpar a tela de escolha Linux
         system ("clear");
+        Limpar a tela de escolha Windows
+        system ("cls")
+        */
         cout << "\nDeseja outro adicional? (s/n)" << endl;
         cin >> resposta;
     }
