@@ -39,37 +39,44 @@ int main ()
         switch (escolha)
         {
         case 0:
-
+            cout << "Veículo Básico: R$" << fabrica+ipi << " reais" << endl;
             opcao0++;
             break;
 
         case 1:
             trioEletrico = ((2*(fabrica+ipi))/100);
             total = total + trioEletrico;
+            cout << "Veículo com adicionais: R$" << (total+fabrica+ipi) << " reais" << endl;
             opcao1++;
             break;
         case 2:
             arCond = ((2*fabrica)/100);
             total = total + arCond;
+            cout << "Veículo com adicionais: R$" << (total+fabrica+ipi) << " reais" << endl;
             opcao2++;
             break;
         case 3:
             dirHidraulica = ((2*fabrica)/100);
             total = total + dirHidraulica;
+            cout << "Veículo com adicionais: R$" << (total+fabrica+ipi) << " reais" << endl;
             opcao3++;
             break;
         case 4:
             completo = (fabrica+ipi) + ((2*(fabrica+ipi))/100) + ((2*fabrica)/100) + ((2*fabrica)/100);
+            desconto = ((3.5*completo)/100);
+            cout << "Desconto para veículo completo: R$" << desconto << " reais" << endl;
+            cout << "Completo: R$" << (completo - desconto) << " reais.\n" << endl;
             opcao4++;
             break;
         case 5:
+            system("cls");
             desconto = ((3.5*completo)/100);
             cout << "\nValor de fábrica R$" << fabrica << " reais" << endl;
-            cout << "Veículo Básico: R$" << fabrica+ipi << " reais" << endl;
             cout << "Valor do IPI: R$" << ipi << " reais" <<endl;
+            cout << "Veículo Básico: R$" << fabrica+ipi << " reais\n\n" << endl;
             cout << "Veículo com adicionais: R$" << (total+fabrica+ipi) << " reais" << endl;
             cout << "Desconto para veículo completo: R$" << desconto << " reais" << endl;
-            cout << "Completo: R$" << (completo - desconto) << " reais" << endl;
+            cout << "Completo: R$" << (completo - desconto) << " reais.\n" << endl;
             cout << "\nVocê optou " << opcao0 << " vezes por veículo básico." << endl;
             cout << "Você optou " << opcao1 << " vezes por Trio Elétrico." << endl;
             cout << "Você optou " << opcao2 << " vezes por Ar condicionado." << endl;
@@ -81,5 +88,6 @@ int main ()
         }
     } 
     while (escolha != 5);
+    system("pause");
     return 0;
 }
