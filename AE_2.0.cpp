@@ -17,13 +17,13 @@ int main ()
     total = 0;
     completo = 0;
     resposta = 's';
-    
+
     cout << fixed << setprecision(2) << endl;
     cout << "Informe o valor de fábrica do veículo: ";
     cin >> fabrica;
     ipi = ((8*fabrica)/100);
-        
-    while (resposta == 's') 
+
+    while (resposta == 's')
     {
         cout << "\nInforme o adicional desejado" << endl;
         cout << "(0) Básico: " << endl;
@@ -31,8 +31,8 @@ int main ()
         cout << "(2) Ar condicionado: " << endl;
         cout << "(3) Direção hidráulica: " << endl;
         cout << "(4) Completo: " << endl;
-        cin >> escolha; 
-        //Finaliza o loop caso escolha básico ou completo. 
+        cin >> escolha;
+        //Finaliza o loop caso escolha básico ou completo.
         if (escolha == 0)
         {
             break;
@@ -83,6 +83,6 @@ int main ()
     cout << "\nVocê optou " << opcao1 << " vezes por Trio Elétrico." << endl;
     cout << "Você optou " << opcao2 << " Vezes por Ar condicionado." << endl;
     cout << "Você optou " << opcao3 << " Vezes por Direção hidraulica.\n\n" << endl;
-    
+
     return 0;
 }
