@@ -9,7 +9,6 @@ int main ()
 {
     setlocale (LC_ALL, "ptb");
     float total, fabrica, trioEletrico, dirHidraulica, arCond, ipi, completo, desconto;
-    //char resposta;
     int escolha;
     int opcao0 = 0;
     int opcao1 = 0;
@@ -18,14 +17,10 @@ int main ()
     int opcao4 = 0;
     total = 0;
     completo = 0;
-    //resposta = 's';
-
     cout << fixed << setprecision(2) << endl;
     cout << "Informe o valor de fábrica do veículo: ";
     cin >> fabrica;
     ipi = ((8*fabrica)/100);
-
-    //while (resposta == 's')
     do
     {
         cout << "\nInforme o adicional desejado" << endl;
